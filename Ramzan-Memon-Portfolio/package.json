@@ -1,0 +1,21 @@
+{
+  "name": "ramzan-memon-portfolio",
+  "version": "1.0.0",
+  "description": "Award-worthy personal portfolio website for Ramzan Memon (Muhammad Ramzan Feroze Memon), professional graphic designer and visual creative.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "graphic-designer",
+    "brand-identity",
+    "poster-design",
+    "figma",
+    "illustrator",
+    "photoshop"
+  ],
+  "author": "Muhammad Ramzan Feroze Memon <memonmuhammadramzan80@gmail.com>",
+  "license": "MIT"
+}
