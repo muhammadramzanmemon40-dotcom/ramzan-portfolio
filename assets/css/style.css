@@ -606,6 +606,22 @@ img, svg {
   -webkit-text-stroke: 1.5px var(--accent);
 }
 
+@media (max-width: 768px) {
+  .hero-title span.outline {
+    display: inline-block;
+    font-size: clamp(1.8rem, 6.2vw, 2.75rem);
+    -webkit-text-stroke: 1.2px var(--accent);
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title span.outline {
+    font-size: clamp(1.45rem, 5.8vw, 1.95rem);
+    -webkit-text-stroke: 1px var(--accent);
+  }
+}
+
 .hero-headline {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 3vw, 2rem);
