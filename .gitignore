@@ -23,3 +23,6 @@ firebase-debug.log*
 # IDE & Editor Files
 .vscode/
 .idea/
+
+# Local Helper Scripts
+push-to-github.bat
