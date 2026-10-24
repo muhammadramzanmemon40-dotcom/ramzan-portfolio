@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E12"/>
+      <stop offset="50%" stop-color="#14141A"/>
+      <stop offset="100%" stop-color="#08080A"/>
+    </linearGradient>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7FF4D" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#D500F9" stop-opacity="0.8"/>
+    </linearGradient>
+    <pattern id="diagLines" width="20" height="20" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#22222B" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#darkBg)"/>
+  <rect width="1600" height="1000" fill="url(#diagLines)"/>
+
+  <!-- Left: Double Exposure Silhouette -->
+  <g transform="translate(120, 160)">
+    <rect width="400" height="680" rx="16" fill="#16161D" stroke="#2B2B36" stroke-width="1.5"/>
+    <circle cx="200" cy="220" r="100" fill="#1E1E28"/>
+    <!-- Abstract double exposure graphic -->
+    <path d="M150,300 C150,210 250,210 250,300 C270,300 290,320 290,360 L110,360 C110,320 130,300 150,300 Z" fill="url(#neonGlow)"/>
+    <text x="200" y="440" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="24" font-weight="700" fill="#F5F3EF" text-anchor="middle">Double Exposure</text>
+    <text x="200" y="480" font-family="'Inter', sans-serif" font-size="14" fill="#A4A4AA" text-anchor="middle">Silhouette blending with landscape</text>
+    <text x="200" y="505" font-family="'Inter', sans-serif" font-size="14" fill="#A4A4AA" text-anchor="middle">textures &amp; urban geometry</text>
+    <rect x="70" y="560" width="260" height="34" rx="17" fill="#24242E" stroke="#363644" stroke-width="1"/>
+    <text x="200" y="582" font-family="'JetBrains Mono', monospace" font-size="12" fill="#C7FF4D" text-anchor="middle" font-weight="600">PHOTOSHOP BLEND MODES</text>
+  </g>
+
+  <!-- Middle: Advanced Compositing -->
+  <g transform="translate(600, 160)">
+    <rect width="400" height="680" rx="16" fill="#16161D" stroke="#2B2B36" stroke-width="1.5"/>
+    <rect x="60" y="120" width="280" height="240" rx="12" fill="#1A1A24" stroke="#333342" stroke-width="1"/>
+    <!-- Horizon / perspective lines -->
+    <line x1="60" y1="280" x2="340" y2="280" stroke="#00E5FF" stroke-width="2"/>
+    <line x1="200" y1="120" x2="100" y2="360" stroke="#C7FF4D" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="200" y1="120" x2="300" y2="360" stroke="#C7FF4D" stroke-width="1" stroke-dasharray="4"/>
+    <circle cx="200" cy="200" r="40" fill="#FFAB00" opacity="0.8"/>
+    <text x="200" y="440" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="24" font-weight="700" fill="#F5F3EF" text-anchor="middle">Advanced Compositing</text>
+    <text x="200" y="480" font-family="'Inter', sans-serif" font-size="14" fill="#A4A4AA" text-anchor="middle">Multi-image seamless stitching with</text>
+    <text x="200" y="505" font-family="'Inter', sans-serif" font-size="14" fill="#A4A4AA" text-anchor="middle">matched perspective &amp; cast shadows</text>
+    <rect x="70" y="560" width="260" height="34" rx="17" fill="#24242E" stroke="#363644" stroke-width="1"/>
+    <text x="200" y="582" font-family="'JetBrains Mono', monospace" font-size="12" fill="#C7FF4D" text-anchor="middle" font-weight="600">ATMOSPHERIC DEPTH MATCHING</text>
+  </g>
+
+  <!-- Right: Commercial Retouching -->
+  <g transform="translate(1080, 160)">
+    <rect width="400" height="680" rx="16" fill="#16161D" stroke="#2B2B36" stroke-width="1.5"/>
+    <rect x="60" y="120" width="280" height="240" rx="12" fill="#1A1A24" stroke="#333342" stroke-width="1"/>
+    <!-- Split comparison line -->
+    <line x1="200" y1="120" x2="200" y2="360" stroke="#C7FF4D" stroke-width="2"/>
+    <text x="130" y="245" font-family="'JetBrains Mono', monospace" font-size="12" fill="#757580" text-anchor="middle">RAW</text>
+    <text x="270" y="245" font-family="'JetBrains Mono', monospace" font-size="12" fill="#C7FF4D" text-anchor="middle">GRADED</text>
+    <text x="200" y="440" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="24" font-weight="700" fill="#F5F3EF" text-anchor="middle">Commercial Retouching</text>
+    <text x="200" y="480" font-family="'Inter', sans-serif" font-size="14" fill="#A4A4AA" text-anchor="middle">Frequency separation skin retouching</text>
+    <text x="200" y="505" font-family="'Inter', sans-serif" font-size="14" fill="#A4A4AA" text-anchor="middle">preserving pore texture &amp; tone</text>
+    <rect x="70" y="560" width="260" height="34" rx="17" fill="#24242E" stroke="#363644" stroke-width="1"/>
+    <text x="200" y="582" font-family="'JetBrains Mono', monospace" font-size="12" fill="#C7FF4D" text-anchor="middle" font-weight="600">300 DPI PRE-PRESS FIDELITY</text>
+  </g>
+</svg>

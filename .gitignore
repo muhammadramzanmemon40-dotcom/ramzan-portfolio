@@ -1,0 +1,25 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Node & Local Development
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment & Secrets (Never commit secrets)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Local Deployment Caches
+.firebase/
+firebase-debug.log*
+
+# IDE & Editor Files
+.vscode/
+.idea/
