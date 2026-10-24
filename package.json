@@ -4,6 +4,7 @@
   "description": "Award-worthy personal portfolio website for Ramzan Memon (Muhammad Ramzan Feroze Memon), professional graphic designer and visual creative.",
   "main": "server.js",
   "scripts": {
+    "build": "echo Static site ready",
     "start": "node server.js",
     "dev": "node server.js"
   },
