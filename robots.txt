@@ -1,0 +1,8 @@
+# Robots.txt for Muhammad Ramzan Feroze Memon (Ramzan Memon) Portfolio
+# Live Website: https://ramzan-portfolio-murex.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://ramzan-portfolio-murex.vercel.app/sitemap.xml

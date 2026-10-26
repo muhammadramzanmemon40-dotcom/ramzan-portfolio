@@ -28,7 +28,9 @@ const MIME_TYPES = {
   '.pdf': 'application/pdf',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
-  '.ttf': 'font/ttf'
+  '.ttf': 'font/ttf',
+  '.xml': 'application/xml; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8'
 };
 
 function getNetworkIps() {
@@ -52,7 +54,12 @@ const server = http.createServer((req, res) => {
     pathname = '/index.html';
   }
 
-  const filePath = path.normalize(path.join(ROOT, pathname));
+  let filePath = path.normalize(path.join(ROOT, pathname));
+
+  // Clean URLs support (e.g. /about -> /about.html)
+  if (!path.extname(pathname) && fs.existsSync(filePath + '.html')) {
+    filePath = filePath + '.html';
+  }
 
   // Security check: ensure path is within ROOT
   if (!filePath.startsWith(ROOT)) {
@@ -146,3 +153,5 @@ server.listen(PORT, HOST, () => {
   }
   console.log(`=======================================================`);
 });
+
+module.exports = server;
