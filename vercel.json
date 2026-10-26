@@ -1,11 +1,10 @@
 {
   "outputDirectory": ".",
-  "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/google69c22a91f2815e01.html",
-      "destination": "/google69c22a91f2815e01.html"
+      "source": "/about",
+      "destination": "/about.html"
     }
   ],
   "headers": [
