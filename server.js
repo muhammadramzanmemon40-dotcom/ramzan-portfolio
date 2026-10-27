@@ -26,6 +26,7 @@ const MIME_TYPES = {
   '.gif': 'image/gif',
   '.ico': 'image/x-icon',
   '.pdf': 'application/pdf',
+  '.apk': 'application/vnd.android.package-archive',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
   '.ttf': 'font/ttf',

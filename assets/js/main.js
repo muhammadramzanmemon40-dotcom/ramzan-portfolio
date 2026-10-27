@@ -855,7 +855,128 @@
   }
 
   // Initialize on DOM load
+  
+  // =========================================================================
+  // SMART EXPENSE SCREENSHOT CAROUSEL & LIGHTBOX CONTROLS
+  // =========================================================================
+  function initSmartExpenseCarousel() {
+    const track = document.getElementById('seCarouselTrack');
+    const prevBtn = document.getElementById('seCarouselPrev');
+    const nextBtn = document.getElementById('seCarouselNext');
+    const dotsWrap = document.getElementById('seDotsWrap');
+    const currentSlideSpan = document.getElementById('seCurrentSlide');
+    const downloadBtn = document.getElementById('seDownloadApkBtn');
+
+    if (!track) return;
+
+    const slides = Array.from(track.querySelectorAll('.se-slide-card'));
+    const dots = dotsWrap ? Array.from(dotsWrap.querySelectorAll('.se-dot')) : [];
+
+    function updateCarouselState() {
+      const scrollLeft = track.scrollLeft;
+      const cardWidth = slides[0] ? slides[0].offsetWidth : 280;
+      const gap = 24; // 1.5rem
+      const totalWidth = cardWidth + gap;
+      
+      const activeIndex = Math.min(
+        slides.length - 1,
+        Math.max(0, Math.round(scrollLeft / totalWidth))
+      );
+
+      // Update dots
+      dots.forEach((dot, idx) => {
+        if (idx === activeIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+
+      // Update counter
+      if (currentSlideSpan) {
+        currentSlideSpan.textContent = String(activeIndex + 1);
+      }
+
+      // Update arrows disabled state
+      if (prevBtn) {
+        prevBtn.disabled = scrollLeft <= 10;
+      }
+      if (nextBtn) {
+        const maxScroll = track.scrollWidth - track.clientWidth - 10;
+        nextBtn.disabled = scrollLeft >= maxScroll;
+      }
+    }
+
+    // Scroll by 1 slide
+    function scrollSlide(direction) {
+      playClickSound();
+      const cardWidth = slides[0] ? slides[0].offsetWidth : 280;
+      const gap = 24;
+      const step = (cardWidth + gap) * direction;
+      track.scrollBy({ left: step, behavior: 'smooth' });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => scrollSlide(-1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => scrollSlide(1));
+    }
+
+    // Dot click
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        playClickSound();
+        const cardWidth = slides[0] ? slides[0].offsetWidth : 280;
+        const gap = 24;
+        track.scrollTo({ left: idx * (cardWidth + gap), behavior: 'smooth' });
+      });
+    });
+
+    // Debounced scroll listener for touch swipe and track scroll
+    let scrollTimeout = null;
+    track.addEventListener('scroll', () => {
+      if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
+      scrollTimeout = requestAnimationFrame(updateCarouselState);
+    }, { passive: true });
+
+    // Keyboard navigation (arrow keys when track is focused)
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        scrollSlide(-1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        scrollSlide(1);
+      }
+    });
+
+    // Make each screenshot clickable to open existing lightbox
+    slides.forEach((slide) => {
+      slide.addEventListener('click', () => {
+        playClickSound();
+        const imgSrc = slide.getAttribute('data-img');
+        const imgTitle = slide.getAttribute('data-title') || 'Smart Expense Screen';
+        if (imgSrc && typeof openLightbox === 'function') {
+          openLightbox(imgSrc, imgTitle);
+        }
+      });
+    });
+
+    // Download APK button sound & toast
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', () => {
+        playSuccessSound();
+        showToast('Initiating Smart-Expense.apk direct download (22.2 MB)...');
+      });
+    }
+
+    // Initial state
+    updateCarouselState();
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    initSmartExpenseCarousel();
     renderProjects('all');
     initEvents();
   });

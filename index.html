@@ -38,6 +38,7 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="#work" class="nav-link">Selected Work</a></li>
+          <li><a href="#smart-expense" class="nav-link">Smart Expense</a></li>
           <li><a href="/about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Tools &amp; Skills</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
@@ -78,11 +79,12 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <ul class="mobile-nav-links">
       <li><a href="#work" class="mobile-nav-link">01 Selected Work <span>→</span></a></li>
-      <li><a href="/about" class="mobile-nav-link">02 About Me <span>→</span></a></li>
-      <li><a href="#skills" class="mobile-nav-link">03 Tools &amp; Skills <span>→</span></a></li>
-      <li><a href="#services" class="mobile-nav-link">04 Services <span>→</span></a></li>
-      <li><a href="#cv" class="mobile-nav-link">05 Resume / CV <span>→</span></a></li>
-      <li><a href="#contact" class="mobile-nav-link">06 Contact <span>→</span></a></li>
+      <li><a href="#smart-expense" class="mobile-nav-link">02 Smart Expense App <span style="font-size:0.65rem; background:rgba(199,255,77,0.15); color:var(--accent); padding:2px 6px; border-radius:4px; margin-left:6px; font-weight:700;">APK</span> <span>→</span></a></li>
+      <li><a href="/about" class="mobile-nav-link">03 About Me <span>→</span></a></li>
+      <li><a href="#skills" class="mobile-nav-link">04 Tools &amp; Skills <span>→</span></a></li>
+      <li><a href="#services" class="mobile-nav-link">05 Services <span>→</span></a></li>
+      <li><a href="#cv" class="mobile-nav-link">06 Resume / CV <span>→</span></a></li>
+      <li><a href="#contact" class="mobile-nav-link">07 Contact <span>→</span></a></li>
     </ul>
 
     <div style="border-top: 1px solid var(--border-strong); padding-top: 1.25rem; display: flex; flex-direction: column; gap: 1rem;">
@@ -237,6 +239,446 @@
         <div class="project-grid" id="projectGrid">
           <!-- Populated dynamically by main.js with all 12 projects -->
         </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SMART EXPENSE ANDROID APP SHOWCASE & CAROUSEL
+         Native Kotlin & Jetpack Compose • Developer: By Ramzan Feroz
+         ===================================================================== -->
+    <section class="section" id="smart-expense">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="eyebrow">FLAGSHIP ANDROID APPLICATION // NATIVE JETPACK COMPOSE</span>
+            <h2 class="section-title">Smart Expense</h2>
+            <p class="section-desc">
+              A private, 100% offline personal finance engine crafted with native Android Jetpack Compose. Engineered specifically for Pakistan with Pakistani Rupee (PKR) note denominations, instant multi-wallet tracking, dynamic budget thresholds, and zero internet permission.
+            </p>
+          </div>
+          <div class="section-header-right">
+            <a href="assets/apps/Smart-Expense.apk" download="Smart-Expense.apk" class="btn-pill btn-pill-accent" title="Download installable Smart Expense Android APK (22.2 MB)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download APK (22.2 MB) &darr;
+            </a>
+          </div>
+        </div>
+
+        <!-- App Overview & Highlights Hero Card -->
+        <div class="se-hero-card">
+          <div class="se-hero-inner">
+            <!-- Left Info Column -->
+            <div class="se-hero-main">
+              <div class="se-app-header">
+                <div class="se-app-icon-box" title="Smart Expense App Icon">
+                  <img src="assets/images/smart-expense/app-icon.png" alt="Smart Expense App Icon" width="76" height="76" loading="lazy" />
+                </div>
+                <div>
+                  <h3 class="se-app-title">Smart Expense</h3>
+                  <div class="se-credit-badge">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>By Ramzan Feroz</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="se-app-desc">
+                Smart Expense is an authentic, production-ready Android application built by <strong>Ramzan Feroz</strong> to solve daily expense tracking in Pakistan. Unlike cloud-dependent apps that require accounts or send financial data abroad, Smart Expense is <strong>100% offline</strong> with zero network permissions. It features Pakistani Rupee (PKR) note denomination quick-entry, multi-account transfers (JazzCash, EasyPaisa, SadaPay, Bank Accounts), monthly spending budgets with 80%/100% alert thresholds, categorized expense notes, and encrypted local database backups.
+              </p>
+
+              <!-- Specification Tags -->
+              <div class="se-app-tags">
+                <span class="se-tag highlight">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  100% Offline (No Internet Permission)
+                </span>
+                <span class="se-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                  Android 8.0+ (API 26+)
+                </span>
+                <span class="se-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  Version 1.0.0
+                </span>
+                <span class="se-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Pakistani Rupee (PKR) Native
+                </span>
+                <span class="se-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  Biometric App Lock
+                </span>
+              </div>
+
+              <!-- Download Button & Meta -->
+              <div class="se-download-actions">
+                <a href="assets/apps/Smart-Expense.apk" download="Smart-Expense.apk" class="se-download-btn" id="seDownloadApkBtn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  <span>Download Android APK</span>
+                </a>
+                <div class="se-download-meta">
+                  <span>Smart-Expense.apk (22.2 MB)</span>
+                  <span>Direct Install &bull; Safe &amp; Verified &bull; Free</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column Highlights -->
+            <div class="se-highlights-box">
+              <div class="se-highlight-item">
+                <div class="se-highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <div class="se-highlight-title">Zero Internet Permission</div>
+                  <div class="se-highlight-desc">100% on-device SQLite database. No background tracking, analytics, or cloud exposure. Your money data stays strictly in your pocket.</div>
+                </div>
+              </div>
+
+              <div class="se-highlight-item">
+                <div class="se-highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+                </div>
+                <div>
+                  <div class="se-highlight-title">Pakistani Rupee Note Denominations</div>
+                  <div class="se-highlight-desc">Rapid one-touch entry using standard Pakistani banknote presets (+100, +500, +1,000, +5,000) for instant physical cash accounting.</div>
+                </div>
+              </div>
+
+              <div class="se-highlight-item">
+                <div class="se-highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <div>
+                  <div class="se-highlight-title">80% &amp; 100% Budget Alerts</div>
+                  <div class="se-highlight-desc">Intelligent monthly budget limits with dynamic color indicators that turn warning amber at 80% and alert red when exceeded.</div>
+                </div>
+              </div>
+
+              <div class="se-highlight-item">
+                <div class="se-highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                </div>
+                <div>
+                  <div class="se-highlight-title">Encrypted JSON &amp; CSV Export</div>
+                  <div class="se-highlight-desc">Full ownership of your records. Export audit-ready CSV sheets for Excel or generate SHA-256 integrity-protected JSON backups anytime.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screenshot Carousel Gallery -->
+        <div class="se-gallery-wrap">
+          <div class="se-gallery-header">
+            <div>
+              <span class="eyebrow">AUTHENTIC APPLICATION SCREENS</span>
+              <h3 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem); margin-top: 0.35rem;">
+                Live Android Interface Preview
+              </h3>
+              <p class="section-desc" style="max-width: 600px;">
+                Captured directly from the running Android build. Tap or click any screen to enlarge in full-resolution lightbox.
+              </p>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="se-carousel-controls">
+              <button class="se-carousel-btn" id="seCarouselPrev" aria-label="Previous Screenshot" title="Previous Screen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"/>
+                </svg>
+              </button>
+              <button class="se-carousel-btn" id="seCarouselNext" aria-label="Next Screenshot" title="Next Screen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Viewport & Scroll Track -->
+          <div class="se-carousel-viewport">
+            <div class="se-carousel-track" id="seCarouselTrack" tabindex="0" role="region" aria-label="Smart Expense Screenshots">
+
+              <!-- Slide 1: Dashboard -->
+              <div class="se-slide-card" data-index="0" data-img="assets/images/smart-expense/01-dashboard.png" data-title="Dashboard &amp; Cashflow Overview">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/01-dashboard.png" alt="Smart Expense Dashboard Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">01 / 08</span>
+                    <span class="se-slide-tag">MAIN HUB</span>
+                  </div>
+                  <h4 class="se-slide-title">Cashflow Dashboard</h4>
+                  <p class="se-slide-caption">Total balance card, monthly budget limit, income/expense cards &amp; quick entry actions.</p>
+                </div>
+              </div>
+
+              <!-- Slide 2: PKR Denomination Keypad -->
+              <div class="se-slide-card" data-index="1" data-img="assets/images/smart-expense/02-income-denominations.png" data-title="Pakistani Rupee Note Selectors">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/02-income-denominations.png" alt="Pakistani Rupee Note Denominations Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">02 / 08</span>
+                    <span class="se-slide-tag">PKR PRESETS</span>
+                  </div>
+                  <h4 class="se-slide-title">PKR Note Denominations</h4>
+                  <p class="se-slide-caption">One-touch keypad buttons for Rs. 100, 500, 1,000 &amp; 5,000 for rapid cash recording.</p>
+                </div>
+              </div>
+
+              <!-- Slide 3: Add Expense Screen -->
+              <div class="se-slide-card" data-index="2" data-img="assets/images/smart-expense/03-add-expense.png" data-title="Add Expense Transaction Screen">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/03-add-expense.png" alt="Add Expense Transaction Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">03 / 08</span>
+                    <span class="se-slide-tag">LOGGING</span>
+                  </div>
+                  <h4 class="se-slide-title">Add Expense Entry</h4>
+                  <p class="se-slide-caption">Category allocation, date/time pickers, account selectors, and transaction notes.</p>
+                </div>
+              </div>
+
+              <!-- Slide 4: Budgets & Category Ceilings -->
+              <div class="se-slide-card" data-index="3" data-img="assets/images/smart-expense/04-budgets-limits.png" data-title="Category Spending Budgets &amp; Alert Engine">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/04-budgets-limits.png" alt="Budgets and Spending Limits Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">04 / 08</span>
+                    <span class="se-slide-tag">BUDGET ENGINE</span>
+                  </div>
+                  <h4 class="se-slide-title">Budgets &amp; Overrun Limits</h4>
+                  <p class="se-slide-caption">Category spending caps with real-time visual progress bars and proactive 80% / 100% warnings.</p>
+                </div>
+              </div>
+
+              <!-- Slide 5: Savings Goals -->
+              <div class="se-slide-card" data-index="4" data-img="assets/images/smart-expense/05-savings-goals.png" data-title="Savings Goals &amp; Milestone Tracking">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/05-savings-goals.png" alt="Savings Goals Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">05 / 08</span>
+                    <span class="se-slide-tag">MILESTONES</span>
+                  </div>
+                  <h4 class="se-slide-title">Savings Goals</h4>
+                  <p class="se-slide-caption">Dedicated target monitoring for emergency reserves, investments, and personal milestones.</p>
+                </div>
+              </div>
+
+              <!-- Slide 6: Analytics & Reports -->
+              <div class="se-slide-card" data-index="5" data-img="assets/images/smart-expense/06-analytics-reports.png" data-title="Monthly Analytics &amp; Visual Spend Reports">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/06-analytics-reports.png" alt="Analytics and Spend Reports Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">06 / 08</span>
+                    <span class="se-slide-tag">ANALYTICS</span>
+                  </div>
+                  <h4 class="se-slide-title">Visual Reports &amp; Trends</h4>
+                  <p class="se-slide-caption">Clear breakdown charts showing expenditure percentages by category and payment channel.</p>
+                </div>
+              </div>
+
+              <!-- Slide 7: Notebook & Journal -->
+              <div class="se-slide-card" data-index="6" data-img="assets/images/smart-expense/07-notebook-journal.png" data-title="Expense Notebook &amp; Structured Financial Notes">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/07-notebook-journal.png" alt="Expense Notebook Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">07 / 08</span>
+                    <span class="se-slide-tag">JOURNAL</span>
+                  </div>
+                  <h4 class="se-slide-title">Notebook &amp; Journal</h4>
+                  <p class="se-slide-caption">Flexible financial notebook to jot down split bills, shopping lists, and future commitments.</p>
+                </div>
+              </div>
+
+              <!-- Slide 8: Settings & Security -->
+              <div class="se-slide-card" data-index="7" data-img="assets/images/smart-expense/08-security-backup.png" data-title="Privacy Settings, Biometrics &amp; Database Backup">
+                <div class="se-device-frame">
+                  <div class="se-device-screen">
+                    <img src="assets/images/smart-expense/08-security-backup.png" alt="Settings and Biometric Security Screen" loading="lazy" />
+                    <div class="se-device-hover-overlay">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      <span>Click to Zoom</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="se-slide-info">
+                  <div class="se-slide-meta">
+                    <span class="se-slide-num">08 / 08</span>
+                    <span class="se-slide-tag">SECURITY</span>
+                  </div>
+                  <h4 class="se-slide-title">Privacy &amp; Data Backup</h4>
+                  <p class="se-slide-caption">Biometric lock toggle, dark themes, JSON database backup/restore, and CSV export.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Pagination Bar -->
+          <div class="se-pagination-bar">
+            <div class="se-dots-wrap" id="seDotsWrap" role="tablist" aria-label="Screenshots Pagination">
+              <button class="se-dot active" data-index="0" aria-label="View Screen 1"></button>
+              <button class="se-dot" data-index="1" aria-label="View Screen 2"></button>
+              <button class="se-dot" data-index="2" aria-label="View Screen 3"></button>
+              <button class="se-dot" data-index="3" aria-label="View Screen 4"></button>
+              <button class="se-dot" data-index="4" aria-label="View Screen 5"></button>
+              <button class="se-dot" data-index="5" aria-label="View Screen 6"></button>
+              <button class="se-dot" data-index="6" aria-label="View Screen 7"></button>
+              <button class="se-dot" data-index="7" aria-label="View Screen 8"></button>
+            </div>
+            <div class="se-pagination-info">
+              Showing Screen <span id="seCurrentSlide" style="color: var(--accent); font-weight: 700;">1</span> of 8 &bull; Swipe or click to inspect
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Functional Highlights Grid -->
+        <div class="se-features-grid">
+          <div class="se-feature-card">
+            <div class="se-feature-head">
+              <div class="se-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h4 class="se-feature-title">Pakistani Rupee (PKR) Presets</h4>
+            </div>
+            <p class="se-feature-desc">Native currency formatting with one-touch note denomination keys (+100, +500, +1,000, +5,000) for Pakistani market cash accounting.</p>
+          </div>
+
+          <div class="se-feature-card">
+            <div class="se-feature-head">
+              <div class="se-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4 class="se-feature-title">Zero Internet Permission</h4>
+            </div>
+            <p class="se-feature-desc">Completely offline with no network access requested in AndroidManifest. Room SQLite local storage guarantees 100% data sovereignty.</p>
+          </div>
+
+          <div class="se-feature-card">
+            <div class="se-feature-head">
+              <div class="se-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </div>
+              <h4 class="se-feature-title">Multi-Account &amp; Digital Wallets</h4>
+            </div>
+            <p class="se-feature-desc">Track Cash in Hand, EasyPaisa, JazzCash, SadaPay, NayaPay, and bank accounts with transfer neutrality across your balances.</p>
+          </div>
+
+          <div class="se-feature-card">
+            <div class="se-feature-head">
+              <div class="se-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <h4 class="se-feature-title">Intelligent Budget Warnings</h4>
+            </div>
+            <p class="se-feature-desc">Dynamic visual budget progress indicators that signal an amber alert when spending hits 80% and a bold crimson warning when exceeded.</p>
+          </div>
+
+          <div class="se-feature-card">
+            <div class="se-feature-head">
+              <div class="se-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <h4 class="se-feature-title">Financial Notebook &amp; Savings</h4>
+            </div>
+            <p class="se-feature-desc">A built-in expense journal and customizable savings goal tracker to build disciplined financial habits and monitor milestones.</p>
+          </div>
+
+          <div class="se-feature-card">
+            <div class="se-feature-head">
+              <div class="se-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h4 class="se-feature-title">Biometrics &amp; Data Ownership</h4>
+            </div>
+            <p class="se-feature-desc">Protect sensitive balances with device biometric authentication and export complete CSV audit sheets or JSON backups at any moment.</p>
+          </div>
+        </div>
+
+        <!-- Bottom Download Call to Action Banner -->
+        <div class="se-cta-banner">
+          <div class="se-cta-text">
+            <h3>Install Smart Expense Today</h3>
+            <p>Designed and built by Ramzan Feroz. Free, privacy-first, and 100% offline personal finance for your Android device.</p>
+          </div>
+          <div>
+            <a href="assets/apps/Smart-Expense.apk" download="Smart-Expense.apk" class="btn-pill btn-pill-accent" style="padding: 0.85rem 1.75rem; font-size: 0.82rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download Smart-Expense.apk (22.2 MB)
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -887,6 +1329,7 @@
 
       <ul class="footer-links">
         <li><a href="#work" class="footer-link">Selected Work</a></li>
+        <li><a href="#smart-expense" class="footer-link">Smart Expense</a></li>
         <li><a href="/about" class="footer-link">About</a></li>
         <li><a href="#skills" class="footer-link">Tools</a></li>
         <li><a href="#cv" class="footer-link">CV / Resume</a></li>
