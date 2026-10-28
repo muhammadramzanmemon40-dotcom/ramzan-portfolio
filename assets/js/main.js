@@ -967,7 +967,7 @@
     if (downloadBtn) {
       downloadBtn.addEventListener('click', () => {
         playSuccessSound();
-        showToast('Initiating Smart-Expense.apk direct download (22.2 MB)...');
+        showToast('Initiating SmartExpense.apk v1.5 direct download (22.3 MB)...');
       });
     }
 
