@@ -1,4 +1,4 @@
-/**
+﻿/**
  * RAMZAN MEMON — PORTFOLIO CORE ENGINE & INTERACTIVITY
  * Art Direction: Independent Design Studio & Editorial Showcase
  * Source of Truth: Authentic CV & 2026 Portfolio of Muhammad Ramzan
@@ -975,7 +975,120 @@
     updateCarouselState();
   }
 
+  
+  // =========================================================================
+  // ISLAMIC COMPANION SCREENSHOT CAROUSEL & LIGHTBOX CONTROLS
+  // =========================================================================
+  function initIslamicCompanionCarousel() {
+    const track = document.getElementById('icCarouselTrack');
+    const prevBtn = document.getElementById('icCarouselPrev');
+    const nextBtn = document.getElementById('icCarouselNext');
+    const dotsWrap = document.getElementById('icDotsWrap');
+    const currentSlideSpan = document.getElementById('icCurrentSlide');
+    const downloadBtns = document.querySelectorAll('.ic-download-btn, #icDownloadApkBtn, #icCtaDownloadBtn, #icHeaderDownloadBtn');
+
+    if (!track) return;
+
+    const slides = Array.from(track.querySelectorAll('.ic-slide-card'));
+    const dots = dotsWrap ? Array.from(dotsWrap.querySelectorAll('.ic-dot')) : [];
+
+    function updateCarouselState() {
+      const scrollLeft = track.scrollLeft;
+      const cardWidth = slides[0] ? slides[0].offsetWidth : 280;
+      const gap = 24;
+      const totalWidth = cardWidth + gap;
+      
+      const activeIndex = Math.min(
+        slides.length - 1,
+        Math.max(0, Math.round(scrollLeft / totalWidth))
+      );
+
+      dots.forEach((dot, idx) => {
+        if (idx === activeIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+
+      if (currentSlideSpan) {
+        currentSlideSpan.textContent = String(activeIndex + 1);
+      }
+
+      if (prevBtn) {
+        prevBtn.disabled = scrollLeft <= 10;
+      }
+      if (nextBtn) {
+        const maxScroll = track.scrollWidth - track.clientWidth - 10;
+        nextBtn.disabled = scrollLeft >= maxScroll;
+      }
+    }
+
+    function scrollSlide(direction) {
+      if (typeof playClickSound === 'function') playClickSound();
+      const cardWidth = slides[0] ? slides[0].offsetWidth : 280;
+      const gap = 24;
+      const step = (cardWidth + gap) * direction;
+      track.scrollBy({ left: step, behavior: 'smooth' });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => scrollSlide(-1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => scrollSlide(1));
+    }
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        if (typeof playClickSound === 'function') playClickSound();
+        const cardWidth = slides[0] ? slides[0].offsetWidth : 280;
+        const gap = 24;
+        track.scrollTo({ left: idx * (cardWidth + gap), behavior: 'smooth' });
+      });
+    });
+
+    let scrollTimeout = null;
+    track.addEventListener('scroll', () => {
+      if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
+      scrollTimeout = requestAnimationFrame(updateCarouselState);
+    }, { passive: true });
+
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        scrollSlide(-1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        scrollSlide(1);
+      }
+    });
+
+    slides.forEach((slide) => {
+      slide.addEventListener('click', () => {
+        if (typeof playClickSound === 'function') playClickSound();
+        const imgSrc = slide.getAttribute('data-img');
+        const imgTitle = slide.getAttribute('data-title') || 'Islamic Companion Screen';
+        if (imgSrc && typeof openLightbox === 'function') {
+          openLightbox(imgSrc, imgTitle);
+        }
+      });
+    });
+
+    downloadBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (typeof playSuccessSound === 'function') playSuccessSound();
+        if (typeof showToast === 'function') {
+          showToast('Initiating Islamic-Companion-v2.1.apk direct download (33.5 MB)...');
+        }
+      });
+    });
+
+    updateCarouselState();
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    initIslamicCompanionCarousel();
     initSmartExpenseCarousel();
     renderProjects('all');
     initEvents();
